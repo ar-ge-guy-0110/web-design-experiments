@@ -1,0 +1,67 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 62.5%;
+    background: linear-gradient(45deg, #335478, #33587f);
+}
+h2 {
+    font-size: calc(30vw / 10);
+    font-size: clamp(1.2rem, calc(30vw / 10), 2rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: clamp(1rem, calc(30vw / 14), 1.25rem);
+    color: #272729;
+}
+main {
+    height: 100vh;
+    padding: 2%;
+    place-items: center;
+    place-content: center;
+    box-shadow: 1px 1px 4px black;
+}
+.form-container {
+    background-color: hsl(55, 99%, 99%);
+    border-radius: 10px;
+    padding: calc(1% + 3vh);
+    width: fit-content;
+}
+input, textarea {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 0.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(0.8rem, calc(30vw / 18), 1rem);
+    color: #3f3f3f;
+}
+button {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: clamp(1rem, calc(30vw / 14), 1.1rem);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0e68c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 1px 1px 4px black;
+}
+button:hover {
+    transform: translate3d(-2px, -2px, 0);
+    box-shadow: 2px 2px 4px black;
+    background-color: #f1e570;
+}
+textarea::placeholder, input::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(0.8rem, calc(30vw / 18), 1rem);
+}
