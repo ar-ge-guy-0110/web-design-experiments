@@ -1,0 +1,63 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 62.5%;
+    background-color: rgb(80, 116, 80);
+}
+#playing-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    height: 90vh;
+    padding: 3%;
+    font-size: 2rem;
+}
+.card {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 450px;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateX(5px) translateY(5px);
+    box-shadow: 6px 6px 4px black;;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-size: 4rem;
+}
+.middle div:last-child {
+    transform: rotateX(180deg);
+}
+.right {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-self: flex-end;
+    transform: rotateX(180deg) rotateY(180deg);
+}
+.red {
+    color: red;
+}
