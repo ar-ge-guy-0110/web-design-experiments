@@ -1,0 +1,92 @@
+:root {
+    --color0: #fff;
+    --color1: #cbfafd;
+    --color2: #a2f1f7;
+    --color3: #8ff8ff;
+    --color4: #6af5ff;
+    --color5: #0eefff;
+    --bg-color: #c4e6f3;
+    --solid-border: 1px solid #3a4146;
+    --dashed-border: 1px dashed #3a4146;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 62.5%;
+    background-color: var(--bg-color);
+}
+main {
+    height: 100vh;
+    place-content: center;
+    overflow-x: auto;
+}
+table, #legend {
+    margin: 0 auto;
+}
+table {
+    font-size: 1rem;
+    border-collapse: collapse;
+}
+tbody, #legend {
+    box-shadow: 4px 4px 4px 4px;
+}
+tr {
+    height: 1rem;
+}
+th, td { 
+    width: 6rem;
+}
+.available-0 {
+    background-color: var(--color0);
+}
+.available-1 {
+    background-color: var(--color1);
+}
+.available-2 {
+    background-color: var(--color2);
+}
+.available-3 {
+    background-color: var(--color3);
+}
+.available-4 {
+    background-color: var(--color4);
+}
+.available-5 {
+    background-color: var(--color5);
+}
+table tbody tr:nth-of-type(1) > td {
+    border-top: var(--solid-border);
+    border-bottom: var(--dashed-border);
+}
+.sharp td {
+    border-left: var(--solid-border);
+    border-right: var(--solid-border);
+    border-bottom: var(--solid-border);
+}
+.half td {
+    border-left: var(--solid-border);
+    border-right: var(--solid-border);
+    border-bottom: var(--dashed-border);
+}
+#legend {
+    font-size: 1rem;
+    margin-top: 2rem;
+    width: fit-content;
+    padding: 1rem;
+}
+#legend span {
+    display: inline-block;
+}
+#legend-gradient {
+    display: inline-block;
+    border: var(--solid-border);
+    width: 8rem;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color0) 0% 17%, var(--color1) 17% 34%, var(--color2) 34% 50%, var(--color3) 50% 67%, var(--color4) 67% 83%, var(--color5) 83% 100%);
+}
